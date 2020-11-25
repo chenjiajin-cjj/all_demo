@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <groupId>chenjiajin</groupId>
+    <artifactId>all_demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>all_demo</name>
+    <modules>
+        <module>chenjiajin_packings</module>
+        <module>chenjiajin_jpa_demo</module>
+        <module>chenjiajin_mongodb_demo</module>
+        <module>some_study_code</module>
+        <module>chenjiajin_redis_demo</module>
+        <module>chenjiajin_rocketmq_demo</module>
+        <module>chenjiajin_spring_security_demo</module>
+        <module>chenjiajin_spring_cloud_demo</module>
+    </modules>
+</project>

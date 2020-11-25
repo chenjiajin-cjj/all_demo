@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  单类bean的注入  -->
+    <bean id="video" class="chenjiajin.springs.domain.Video" scope="prototype">
+        <property name="id" value="9"/>
+        <property name="title" value="Spring 5.X"/>
+    </bean>
+
+    <!--  单类bean依赖另一个bean的注入  -->
+    <bean id="videoOrder" class="chenjiajin.springs.domain.VideoOrder">
+        <property name="id" value="8" />
+    <!--    代表这个类的这个属性是依赖上面那个id为video的bean    -->
+        <property name="video" ref="video"/>
+    </bean>
+
+    <bean id="video12" class="chenjiajin.springs.domain.Video">
+        <constructor-arg name="title" value="值啊"></constructor-arg>
+    </bean>
+
+    <bean id="video33" class="chenjiajin.springs.domain.Video" autowire="byType">
+        <property name="id" value="9"/>
+        <property name="title" value="Spring 5.X"/>
+    </bean>
+
+    <bean id="myBeanFactory" class="chenjiajin.springs.domain.MyBeanFactory"/>
+
+    <bean id="beanLift" class="chenjiajin.springs.domain.BeanLife"  init-method="init" destroy-method="destory">
+        <property name="context" value="测试生命周期"/>
+    </bean>
+</beans>
